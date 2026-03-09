@@ -49,8 +49,9 @@ ros2 run xarm_perturbations perturbation_injector --ros-args \
 -p mode:=gaussian -p noise_mean:=0.0 -p noise_stddev:=0.02 -p noise_axis:=all
 
 📊 Resultados Resumidos (Métrica RMSE)
-Controlador,Condición,RMSE (m),Observación Principal
-PID (Real),Sin perturbación,0.029,Error nominal debido al desfase temporal reactivo.
-PID (Real),Con perturbación,0.397,Pérdida de referencia y saturación (windup).
-CTC (Simulado),Sin perturbación,0.0001,Cancelación analítica idealizada de dinámicas.
-CTC (Simulado),Con perturbación,0.0009,Alta absorción de fuerzas externas.
+| Controlador | Condición | RMSE (m) | Observación Principal |
+| :--- | :--- | :---: | :--- |
+| **PID (Real)** | Sin perturbación | 0.029 | Error nominal debido al desfase temporal reactivo. |
+| **PID (Real)** | Con perturbación | 0.397 | Pérdida de referencia y saturación (*windup*). |
+| **CTC (Simulado)** | Sin perturbación | 0.0001 | Cancelación analítica idealizada de dinámicas. |
+| **CTC (Simulado)** | Con perturbación | 0.0009 | Alta absorción de fuerzas externas. |
